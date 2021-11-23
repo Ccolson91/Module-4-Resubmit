@@ -1,0 +1,43 @@
+[
+  {
+    "id": 1,
+    "title": "Monjunis Italian Restaurant",
+    "rating": 5,
+    "img": null
+  },
+
+  {
+    "id": 2,
+    "title": "Mi Padres",
+    "rating": 5,
+    "img": null
+  },
+
+  {
+    "id": 3,
+    "title": "Roux House",
+    "rating": 3,
+    "img": null
+  },
+
+  {
+    "id": 4,
+    "title": "Schlittz & Giggles",
+    "rating": 4,
+    "img": null
+  },
+
+  {
+    "id": 5,
+    "title": "Cheba Hut",
+    "rating": 5,
+    "img": null
+  },
+
+  {
+    "id": 6,
+    "title": "Albasha Express",
+    "rating": 4,
+    "img": null
+  }
+]

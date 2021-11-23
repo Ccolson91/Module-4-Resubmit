@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title class="title">Assessment 4 Resubmit</title>
+  </head>
+
+  <body class="container">
+    <button id="complimentButton">Get a compliment</button>
+ 
+    <div class="container">  
+        <button class="cta" id="getFortuneButton">
+          <i class="fas fa-plus"></i>
+          <span class="button-text">Get a Fortune</span>
+        </button>
+    </div>
+    <h3>What do you get when you cross a hippo, an elephant and a rhino?</h3>
+    <div class="container">  
+        <button class="cta" id="joke-button">
+          <i class="fas fa-plus"></i>
+          <span class="button-text">See answer!</span>
+        </button>
+    </div>
+
+    <header>
+        <h1>Local Hotspots!</h1>
+    </header>
+    <main>
+
+
+        <form>
+            <input 
+                type='text'
+                id="title"
+                placeholder="Where do you like to go?"/>
+            <input 
+                type='text'
+                id="img"
+                placeholder='Add an image URL'/>
+            
+            <section id="ratings-container">
+            
+            <p>Rate your local hotspots!
+            <br>1 &#9733 being lowest</p>
+
+            <div id="radio-container">
+            
+                <label for="one">
+                 <input
+                  class="star"
+                  type="radio"
+                  name="ratings"
+                  value="1"
+                  id="one"/>
+                  
+                     
+                </label>
+                
+                <label for="two">
+                <input
+                  class="star"
+                  type="radio"
+                  name="ratings"
+                  value="2"
+                  id="two"/>
+
+                    
+                </label>
+
+                <label for="three">
+                <input
+                  class="star"
+                  type="radio"
+                  name="ratings"
+                  value="3"
+                  id="three"/>
+                    
+                    
+                </label>
+
+                <label for="four">
+                <input
+                  class="star"
+                  type="radio"
+                  name="ratings"
+                  value="4"
+                  id="four"/>
+
+                    
+                </label>
+
+                <label for="five">
+                <input
+                  class="star"
+                  type="radio"
+                  name="ratings"
+                  value="5"
+                  id="five"/>
+
+                    
+                 </label>
+            </div>
+        </section>
+        <button>Full Send!</button>
+        </form>
+
+        <section id="favorites-container"></section>
+
+<!-- // See the states feature -->
+
+        <h3>See the states!</h3>
+    <button id="statesButton">Show me the states!</button>
+
+    <section id="states-container">
+      <div id="states-visited">
+
+      </div>
+
+    </section>
+
+    </body>
+        </main>
+
+        
+ 
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <script>
+      document.getElementById("complimentButton").onclick = function () {
+        axios.get("http://localhost:4000/api/compliment/")
+            .then(function (response) {
+              const data = response.data;
+              alert(data);
+            });
+
+      };
+
+      document.getElementById("getFortuneButton").onclick = function () {
+        axios.get("http://localhost:4000/api/fortunes/")
+          .then(function (response) {
+           const data = response.data;
+            alert(data);
+          });
+      };  
+
+      document.getElementById("joke-button").onclick = function()  {
+        axios.get('http://localhost:4000/api/joke')
+        .then(function (response) {
+          const data = response.data
+          alert(data)
+        })
+      }
+
+      // document.getElementById("mood-btn").onclick = function () {
+      //   axios.post("http://localhost:4000/api/mood/")
+      //     .then(function (response) {
+      //      const data = response.data;
+      //       alert(data[1]);
+      //     });
+      // };  
+</script>
+    
+<script src="main.js"></script>
+</body>
+</html>
